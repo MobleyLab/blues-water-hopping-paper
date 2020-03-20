@@ -16,11 +16,9 @@ For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en
 
 - example.pbs: Example bash script to execute `example.py` on a TSCC cluster.
 - example.yaml: Basic YAML script specifying the parameters for the simulations.
- - `simulation: pressure` - sets the simulation to run NPT. When not used, the default is NVT.
- - `nstepsMD`, `nstepsNC` and `nIter` - control the number of MD steps, NCMC steps and the number of iterations used, respectively.
- - `restraints: selection` - AmberMask selection to apply positional restraints and `weight` is the restraint weight for xyz atom restraints in kcal/(mol A^2). Used to restrain all of the alpha carbons, carbons, and/or ligands. The specific restraint selection was '@CA&!(:158)' for MUP-1, ':209|@CA' for HSP90 and '@C' for the graphene sheets in the water box and the C60 buckyball systems.
+  - `simulation: pressure` - sets the simulation to run NPT. When not used, the default is NVT.
+  - `nstepsMD`, `nstepsNC` and `nIter` - control the number of MD steps, NCMC steps and the number of iterations used, respectively.
+  - `restraints: selection` - AmberMask selection to apply positional restraints and `weight` is the restraint weight for xyz atom restraints in kcal/(mol A^2). Used to restrain all of the alpha carbons, carbons, and/or ligands. The specific restraint selection was '@CA&!(:158)' for MUP-1, ':209|@CA' for HSP90 and '@C' for the graphene sheets in the water box and the C60 buckyball systems.
 
 - WaterTranslation.py: Example python script for the water hopping moves.
-  - The move requires the user to indicate an atom and a radius defining a sphere encompassing an area of interest around the atoms position. This script requires user selection of an atom, the residue name of water, a PDB of the system (used to update positions for distance calculations), and a radius.
-  The HSP90 system used atom C10 of the ligand (atom number 3282), roughly the center of the ligand.
-  The MUP-1 system used atom C9 of the ligand (atom number 2505)
+  - The move requires the user to indicate an atom and a radius defining a sphere encompassing an area of interest around the atoms position. This script requires user selection of an atom, the residue name of water, a PDB of the system (used to update positions for distance calculations), and a radius. The HSP90 system used atom C10 of the ligand (atom number 3282), roughly the center of the ligand. The MUP-1 system used atom C9 of the ligand (atom number 2505)
