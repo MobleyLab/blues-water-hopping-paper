@@ -168,17 +168,17 @@ class WaterTranslationMove(Move):
         sphere_point = np.array([x, y, z]) * r + origin
         return sphere_point
 
-    def getMasses(self, topology):
-        """Returns a list of masses of the specified ligand atoms.
-        Parameters
-        ----------
-        topology: parmed.Topology
-            ParmEd topology object containing atoms of the system.
-        """
-        masses = unit.Quantity(np.zeros([int(topology.getNumAtoms()), 1], np.float32), unit.dalton)
-        for idx,atom in enumerate(topology.atoms()):
-            masses[idx] = atom.element._mass #gets the mass of the atom, adds to list (along with index)
-        return masses
+#    def getMasses(self, topology):
+#        """Returns a list of masses of the specified ligand atoms.
+#        Parameters
+#        ----------
+#        topology: parmed.Topology
+#            ParmEd topology object containing atoms of the system.
+#        """
+#        masses = unit.Quantity(np.zeros([int(topology.getNumAtoms()), 1], np.float32), unit.dalton)
+#        for idx,atom in enumerate(topology.atoms()):
+#            masses[idx] = atom.element._mass #gets the mass of the atom, adds to list (along with index)
+#        return masses
 
     def beforeMove(self, nc_context):
         """
