@@ -13,6 +13,7 @@ For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en
 
 - example.py: Example python script for running equilibration.
   - Has options for restraining atoms in the MD and alchemical system.
+
 - example.pbs: Example bash script to execute `example.py` on a TSCC cluster.
 - example.yaml: Basic YAML script specifying the parameters for the simulations.
  - `simulation: pressure` - sets the simulation to run NPT. When not used, the default is NVT.
