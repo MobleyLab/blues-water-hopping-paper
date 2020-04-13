@@ -1,10 +1,4 @@
-# Example scripts and used in the calculations
-
-The systems were minimized until forces were below a tolerance of 10 kJ/mol. Long-range electrostatics were calculated using Particle Mesh Ewald. Simulations were run using a 4fs timestep and hydrogen mass repartitioning. The alpha carbons and/or ligands in the systems were restrained with a 5 kcal/(mol A^2) force constant. The temperature was set to 300 K in all cases except the water box with graphene sheets, which was set to 500 K.
-
-Molecular dynamics simulation details: For the Buckyball system, equilibration consisted of 250 ps of NVT MD and 10 ns of NPT MD of equilibration. The MD production run was for 10 ns in the NPT ensemble. For the water box with dividing graphene sheets, equilibration consisted of 5 ns NVT MD. The MUP-1 protein-ligand system was equilibrated for 1 ns of NVT MD and 10ns NPT MD. The MD production run was for 40 ns in the NPT ensemble. The HSP90 protein-ligand system was equilibrated for 1 ns of NVT MD and 80ns NPT MD. The MD production run was for 285 ns in the NPT ensemble.
-
-BLUES simulation details: For the water box system with dividing graphene sheets, BLUES with translational water moves was executed for 240000 iterations, using 2500 NCMC steps and 1000 MD steps. The buckyball system was simulated for a total of 1000 iterations, using 2500 NCMC steps and 1000 MD steps. Additional amounts of NCMC steps were tested for the MUP-1 system, and varied from 1250 to 30000 steps. Both of the solvated MUP-1 and HSP90 (PBD: 5j64) systems were simulated for a total of 10,000 BLUES iterations. For the MUP-1 system, various amounts of NCMC steps were tested, varying from 1250 to 30000 NCMC steps, but the number of MD steps in all cases was 1000 MD steps per iteration. For the HSP90 system, each BLUES iteration consisted of 2500 NCMC steps and 1000 MD steps.
+# Example scripts used in the calculations
 
 For documentation on the BLUES modules see https://github.com/MobleyLab/blues/blob/master/README.md.
 For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en/latest/tutorial.html.
@@ -15,6 +9,7 @@ For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en
   - Has options for restraining atoms in the MD and alchemical system.
 
 - example.pbs: Example bash script to execute `example.py` on a TSCC cluster.
+
 - example.yaml: Basic YAML script specifying the parameters for the simulations.
   - `simulation: pressure` - sets the simulation to run NPT. When not used, the default is NVT.
   - `nstepsMD`, `nstepsNC` and `nIter` - control the number of MD steps, NCMC steps and the number of iterations used, respectively.

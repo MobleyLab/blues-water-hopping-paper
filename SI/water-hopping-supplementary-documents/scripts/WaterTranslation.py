@@ -99,7 +99,8 @@ class Move(object):
 
 
 class WaterTranslationMove(Move):
-    """ Move that translates a random water within a specified radius of the protein's
+    """
+    Move that translates a random water within a specified radius of the protein's
     center of mass to another point within that radius
     Parameters
     ----------
@@ -211,6 +212,7 @@ class WaterTranslationMove(Move):
             else:
                 pass
         #replace chosen water's positions/velocities with alchemical water
+        #the alchemical water is used for bookkeeping
         for i in range(3):
             #set indices of the alchemical waters atoms equal to the indices of the starting positions of the random waters atoms
             switch_pos[self.atom_indices[i]] = start_pos[water_choice[i]]
@@ -253,7 +255,8 @@ class WaterTranslationMove(Move):
         """
         This method is called at the end of the NCMC portion if the
         context needs to be checked or modified before performing the move
-        at the halfway point.
+        at the halfway point. This function ensures the water is still within
+        a sphere of self.radius at the end of the move.
         Parameters
         ----------
         context: simtk.openmm.Context object
