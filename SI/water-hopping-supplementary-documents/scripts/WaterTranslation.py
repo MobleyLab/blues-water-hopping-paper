@@ -201,7 +201,7 @@ class WaterTranslationMove(Move):
         switch_vel = np.copy(start_vel)*start_vel.unit
         is_inside_sphere = False
         while not is_inside_sphere:
-            water_index = np.random.randint(2,8679)
+            water_index = np.random.randint(1,len(self.water_residues)) #skip over first water in the system 
             water_choice = self.water_residues[water_index]
             self.traj.xyz[0,:,:] = start_pos;
             pairs = self.traj.topology.select_pairs(np.array(water_choice[0]).flatten(), np.array(self.protein_atoms).flatten())
