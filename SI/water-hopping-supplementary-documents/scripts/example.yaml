@@ -6,8 +6,8 @@ logger:
   stream: True
 
 structure:
-  filename: mup.prmtop
-  xyz: mup.inpcrd
+  filename: SYSTEM.prmtop
+  xyz: SYSTEM.inpcrd
 
 system:
   nonbondedMethod: PME
@@ -36,6 +36,7 @@ system:
     annihilate_electrostatics : True
     annihilate_sterics : False
 
+#Uncomment freeze or restraints section to freeze/restrain atoms in the MD and alchemical system
 #freeze:
 #  freeze_selection: ':158'
 

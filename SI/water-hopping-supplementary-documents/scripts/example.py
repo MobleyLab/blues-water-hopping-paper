@@ -4,12 +4,11 @@ from blues.simulation import *
 import json
 from blues.settings import Settings
 
-opt = Settings('equilibration.yaml').asDict()
+opt = Settings('example.yaml').asDict()
 structure = opt['Structure']
 #restart = parmed.amber.Rst7('NPT_MD.rst7')
-
-structure.positions = restart.positions
-structure.box = restart.box
+#structure.positions = restart.positions
+#structure.box = restart.box
 print(json.dumps(opt, sort_keys=True, indent=2, skipkeys=True, default=str))
 
 
@@ -36,11 +35,11 @@ systems = SystemFactory(structure, ligand.atom_indices, opt['system'])
 simulations = SimulationFactory(systems, ligand_mover, opt['simulation'], opt['md_reporters'], opt['ncmc_reporters'])
 
 # Energy minimize system
-simulations.md.minimizeEnergy(maxIterations=0)
+simulations.md.minimizeEnergy(maxIterations=0) #minimize until convergence is reached
 state = simulations.md.context.getState(getPositions=True, getEnergy=True)
 print('Minimized energy = {}'.format(state.getPotentialEnergy().in_units_of(unit.kilocalorie_per_mole)))
 
-# MD simulation - Used for equilibration and MD production runs only
+# MD simulation - Uncomment for equilibration and MD production runs only
 simulations.md.step(opt['simulation']['nstepsMD'])
 
 #BLUES Simulation - Only used for BLUES production runs
