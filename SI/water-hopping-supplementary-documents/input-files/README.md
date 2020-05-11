@@ -1,4 +1,4 @@
-Folders contain the system input files in AMBER format. See [here](https://ambermd.org/FileFormats.php "AMBER file formats") for a description of AMBER file formats.
+Folders contain the system input files in [AMBER format](https://ambermd.org/FileFormats.php "AMBER file formats").
 
 - `MUP-1/`: Provided are AMBER files for the Major urinary protein 1 (MUP-1) in `.inpcrd`, `.prmtop` and `.pdb` format.
 - `HSP90/`: Provided are AMBER files for the Heat shock protein 90 (HSP90) in `.inpcrd`, `.prmtop` and `.pdb` format.

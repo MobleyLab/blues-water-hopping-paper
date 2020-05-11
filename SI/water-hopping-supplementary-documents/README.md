@@ -5,5 +5,5 @@
     - `example.py`: Example python script for running simulations.
     - `example.pbs`: Example bash script to execute `example.py` on a TSCC cluster.
     - `example.yaml`: Basic YAML script specifying the parameters for the simulations.
-    - `WaterTranslation.py`: Example python script for the water hopping moves.
+    - `WaterTranslation.py`: Example python script for the water hopping moves, also used to generate the OpenMM Simulations.
 - `input-files/`: Folder containing the system input files. Contains AMBER files for Major urinary protein 1 (MUP-1), Heat shock protein 90 (HSP90), Buckminsterfullerene C60, and the water box system with dividing graphene walls.
