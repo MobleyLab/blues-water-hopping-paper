@@ -20,7 +20,7 @@ Additional details of individual system setups are available in the paper.
     - The specific restraint selection was '@CA&!(:158)' for MUP-1, ':209|@CA' for HSP90 and '@C' for the graphene sheets in the water box and the C60 buckyball systems.
 
 - `WaterTranslation.py`: Example python script to generate the OpenMM Simulations and to perform the water hopping moves. Required by `example.py`.
-  - The move requires the user to indicate an atom and a radius defining a sphere encompassing an area of interest around the atoms position. This script requires user selection of an atom (line 142), the residue name of the water in the system (line 116), a PDB of the system (line 123, the PDB is used to update positions for distance calculations), and a radius. The first water in the system is used as a bookkeeping device (line 140).
+  - The move requires the user to indicate an atom and a radius defining a sphere encompassing an area of interest around the atoms position. This script requires user selection of an atom (line 142), the residue name of the water in the system (line 116), a PDB of the system (line 124) which is used to update positions for distance calculations, and a radius (line 117). The first water in the system is used as a bookkeeping device (line 140).
     - System atom selection and radius details (more details can be found in the paper):
       - The HSP90 system used atom C10 of the ligand (atom number 3282), roughly the center of the ligand, and the radius was set to 1.5 nanometers.
       - The MUP-1 system used atom C9 of the ligand (atom number 2505) and the radius was set to 2.0 nanometers.
