@@ -1,7 +1,9 @@
 # Example scripts used in the calculations
 
 For documentation on the BLUES modules see https://github.com/MobleyLab/blues/blob/master/README.md.
+
 For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en/latest/tutorial.html.
+
 Additional details of individual system setups are available in the paper.
 
 ### Manifest
