@@ -2,13 +2,14 @@
 
 For documentation on the BLUES modules see https://github.com/MobleyLab/blues/blob/master/README.md.
 For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en/latest/tutorial.html.
+Additional details of individual system setups are available in the paper.
 
 ### Manifest
 
 - `example.py`: Example python script for running simulations. Requires `example.yaml` and `WaterTranslation.py`.
   - Equilibration: First edit `example.yaml` to provide the names of input files (under `structure`) and other details (ie specify the number of MD steps with `nstepsMD`). A `.rst7` file will be generated once equilibration finishes.
-  - MD production: In `example.py`, uncomment lines 9-11 to use the `.rst7` file from equilibration and comment out lines 38-40 (which pertain to energy minimization). In `example.yaml`, update `nstepsMD` as needed.
-  - BLUES simulation: In `example.py`, uncomment lines 9-11 to use the `.rst7` file from equilibration and comment out lines 38-40 (which pertain to energy minimization). In `example.yaml`, update the number of `nstepsMD` (number of MD steps to use per BLUES cycle), `nstepsNC` (number of NCMC steps to use per BLUES cycle) and `nIter` (total number of blues cycles).
+  - MD production: In `example.py`, uncomment lines 9-11 and use the equilibration `.rst7` file as input and comment out lines 38-40 (which pertain to energy minimization). In `example.yaml`, update `nstepsMD` for production as needed.
+  - BLUES simulation: In `example.py`, uncomment lines 9-11 and use the equilibration `.rst7` file as input and comment out lines 38-40 (which pertain to energy minimization). In `example.yaml`, update the number of `nstepsMD` (number of MD steps to use per BLUES cycle), `nstepsNC` (number of NCMC steps to use per BLUES cycle) and `nIter` (total number of blues cycles).
 
 - `example.pbs`: Example bash script to execute `example.py` on a TSCC cluster.
 
