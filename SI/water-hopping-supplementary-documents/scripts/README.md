@@ -6,7 +6,6 @@ For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en
 
 Additional details of individual system setups are available in the paper.
 
-if I wanted to use this to reproduce one of your calculations, what exactly should I do and in what files?
 
 ## Usage
 Steps for reproducing a calculation:
