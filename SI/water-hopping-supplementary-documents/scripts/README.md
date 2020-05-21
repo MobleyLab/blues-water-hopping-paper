@@ -6,6 +6,14 @@ For a tutorial on how to use BLUES see https://mobleylab-blues.readthedocs.io/en
 
 Additional details of individual system setups are available in the paper.
 
+if I wanted to use this to reproduce one of your calculations, what exactly should I do and in what files?
+
+## Usage
+Steps for reproducing a calculation:
+- Equilibration: update `example.yaml` with input files and specify `nstepsMD`. In `example.py`, uncomment lines pertainning to minimization and MD. Use `example.pbs`to execute `example.py` on a cluster (TSCC in this case).
+- BLUES simulation: In `example.py` use the `.rst7` output file from equilibration as input (lines 9-11) and comment out lines which pertain to energy minimization and plain MD. In `example.yaml`, update the number of  MD steps to use per BLUES cycle in `nstepsMD`, the number of NCMC steps to use per BLUES cycle in `nstepsNC` and the total number of blues cycles in `nIter`. In `example.yaml`, use `restraints`  to apply positional restraints using AmberMask syntax (some examples can be found here https://amber-md.github.io/pytraj/latest/atom_mask_selection.html). If restraints are used, make sure to uncomment the appropriate lines in `example.py` to restrain atoms in both the MD and alchemical system. In `WaterTranslation.py` on line 117, input desired radius for defining a sphere and the residue name of the water in the system. Input a PDB of the system on line 124. Input the protein residue name in line 135 and indicate the specific atom that the radius will span from in line 143. Use `example.pbs`to execute `example.py` again.
+
+
 ### Manifest
 
 - `example.py`: Example python script for running simulations. Requires `example.yaml` and `WaterTranslation.py`.
