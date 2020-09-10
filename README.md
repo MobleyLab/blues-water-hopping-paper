@@ -3,7 +3,7 @@
 Provided are figures, tables, and supplementary documents for the "Enhancing Water Sampling of Buried Binding Sites Using Nonequilibrium Candidate Monte Carlo" paper. Supplementary documents include code, scripts and input files for running the simulations.
 
 ## What's Here
-- `Figures/`: This folder contains the figures and plots for the paper.
+- `Figures-and-Tables/`: This folder contains the figures, plots, and table used in the paper.
 
 - `SI/water-hopping-supplementary-documents/`:
   - `SI-tables/`: Folder containing tables as reported in the water darting SI.
