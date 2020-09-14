@@ -1,4 +1,5 @@
 ### Manifest
+
 - [`SI-tables/`](SI-tables): Folder containing tables as reported in the water darting SI. Tables include acceptance ratios of the replicate simulations at different NCMC step amounts for the MUP-1 system, the average acceptance rate of all moves and average number of force evaluations across replicates for the buried cavity in MUP-1 system to become hydrated, and acceptance ratios of all attempted moves for each replicate simulation of the HSP90 protein-ligand system.
 - [`scripts/`](scripts): Folder containing example scripts used for MD and BLUES simulations.
   - Contains:
