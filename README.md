@@ -1,6 +1,6 @@
 # BLUES-water-hopping
 
-Provided are figures, tables, and supplementary documents for the "Enhancing Water Sampling of Buried Binding Sites Using Nonequilibrium Candidate Monte Carlo" paper. Supplementary documents include code, scripts and input files for running the simulations. <a href="url"><img src="https://github.com/MobleyLab/blues-water-hopping-paper/blob/master/Figures-and-Tables/water-scaled-arrow.jpeg" align="right" height="120" width="120" ></a>
+Provided are figures, tables, and supplementary documents for the "Enhancing Water Sampling of Buried Binding Sites Using Nonequilibrium Candidate Monte Carlo" paper. Supplementary documents include code, scripts and input files for running the simulations. 
 
 ## What's Here
 
