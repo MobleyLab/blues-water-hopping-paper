@@ -6,6 +6,6 @@ Provided are figures, tables, and supplementary documents for the "Enhancing Wat
 - [`Figures-and-Tables/`](Figures-and-Tables): This folder contains the figures, plots, and table used in the paper.
 
 - [`SI/water-hopping-supplementary-documents/`](SI/water-hopping-supplementary-documents):
-  - [`SI-tables/`](SI-tables): Folder containing tables as reported in the water darting SI.
-  - [`scripts/`](scripts): Folder containing example scripts used for MD and BLUES simulations.
-  - [`input-files/`](input-files): Folder containing the system input files in AMBER format.
+  - [`SI-tables/`](SI/water-hopping-supplementary-documents/SI-tables): Folder containing tables as reported in the water darting SI.
+  - [`scripts/`](SI/water-hopping-supplementary-documents/scripts): Folder containing example scripts used for MD and BLUES simulations.
+  - [`input-files/`](SI/water-hopping-supplementary-documents/input-files): Folder containing the system input files in AMBER format.
