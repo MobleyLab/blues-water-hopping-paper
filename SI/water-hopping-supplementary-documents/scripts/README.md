@@ -26,7 +26,7 @@ Steps for reproducing a calculation:
   - `simulation: pressure` - sets the simulation to run NPT. When not used, the default is NVT.
   - `nstepsMD`, `nstepsNC` and `nIter` - control the number of MD steps, NCMC steps and the number of iterations used, respectively.
   - `restraints: selection` - AmberMask selection to apply positional restraints and `weight` is the restraint weight for xyz atom restraints in kcal/(mol A^2). Used to restrain all of the alpha carbons, carbons, and/or ligands.
-    - The specific restraint selection was '@CA&!(:158)' for MUP-1, ':209|@CA' for HSP90 and '@C' for the graphene sheets in the water box and the C60 buckyball systems.
+    - The specific restraint selection was ':158|@CA' for MUP-1, ':209|@CA' for HSP90 and '@C' for the graphene sheets in the water box and the C60 buckyball systems.
 
 - [`WaterTranslation.py`](WaterTranslation.py): Example python script to generate the OpenMM Simulations and to perform the water hopping moves. Required by [`example.py`](example.py).
   - The move requires the user to indicate an atom and a radius defining a sphere encompassing an area of interest around the atoms position. This script requires user selection of an atom (line 142), the residue name of the water in the system (line 116), a PDB of the system (line 124) which is used to update positions for distance calculations, and a radius (line 117). The first water in the system is used as a bookkeeping device (line 140).
